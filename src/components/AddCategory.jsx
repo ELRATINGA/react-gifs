@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 export const AddCategory = ({ onNewCategorie }) => {
     
@@ -11,9 +12,10 @@ export const AddCategory = ({ onNewCategorie }) => {
     const onSubmitNotReloy = (even) => {
         even.preventDefault();
         const cleanInput = inputValue.trim();
-
+        
         if (cleanInput <= 1) return;
-
+        
+        console.log('XDD')
       //setCategories(categories => [ ...categories, inputValue ]);
       //setCategories([ ...categories, 'Dead by Deadlight' ] ); Esta solo funciona si en los props le mando 'categories'.
 
@@ -22,7 +24,7 @@ export const AddCategory = ({ onNewCategorie }) => {
     }
 
     return (
-        <form onSubmit={ onSubmitNotReloy }> {/*También se puede poner en 'onSubmitNotReloy' '(even) => onSubmitNotReloy(even)'*/}
+        <form onSubmit={ onSubmitNotReloy } aria-label='form'> {/*También se puede poner en 'onSubmitNotReloy' '(even) => onSubmitNotReloy(even)'*/}
 
         <input 
             type="text" 
@@ -33,4 +35,8 @@ export const AddCategory = ({ onNewCategorie }) => {
         
         </form>
     )
+}
+
+AddCategory.propTypes = {
+    onNewCategorie: PropTypes.func.isRequired,
 }

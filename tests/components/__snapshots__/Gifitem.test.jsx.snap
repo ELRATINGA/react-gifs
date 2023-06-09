@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gifitem Debe de hacer match con el snapshot 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <img
+      alt="Genshin"
+      src="xd"
+    />
+    <p>
+      Genshin
+    </p>
+  </div>
+</div>
+`;
